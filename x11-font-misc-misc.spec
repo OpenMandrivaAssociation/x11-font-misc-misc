@@ -1,11 +1,11 @@
 Name: x11-font-misc-misc
 Version: 1.0.0
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
 URL: http://xorg.freedesktop.org
 Source: http://xorg.freedesktop.org/releases/individual/font/font-misc-misc-%{version}.tar.bz2
-License: CHECK
+License: Public Domain
 BuildRoot: %{_tmppath}/%{name}-root
 BuildArch: noarch
 
@@ -47,6 +47,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
+%dir %_datadir/fonts/misc/
 %_datadir/fonts/misc/10x20*.pcf.gz
 %_datadir/fonts/misc/12x13ja.pcf.gz
 %_datadir/fonts/misc/18x18*.pcf.gz
