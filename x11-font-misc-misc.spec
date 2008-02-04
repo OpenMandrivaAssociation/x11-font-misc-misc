@@ -12,7 +12,7 @@ BuildRequires: x11-font-util >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.1
 
 Conflicts: xorg-x11 <= 6.9.0
-Requires(post,preun): mkfontdir mkfontscale
+Requires(post,postun): mkfontdir mkfontscale
 
 %description
 Xorg X11 font misc-misc
@@ -35,7 +35,7 @@ rm -f %{buildroot}%_datadir/fonts/misc/fonts.scale
 mkfontscale %_datadir/fonts/misc
 mkfontdir %_datadir/fonts/misc
 
-%preun
+%postun
 mkfontscale %_datadir/fonts/misc
 mkfontdir %_datadir/fonts/misc
 
