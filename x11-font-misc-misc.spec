@@ -1,6 +1,6 @@
 Name: x11-font-misc-misc
-Version: 1.0.0
-Release: %mkrel 9
+Version: 1.1.0
+Release: %mkrel 1
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -22,7 +22,7 @@ Xorg X11 font misc-misc
 %setup -q -n font-misc-misc-%{version}
 
 %build
-%configure2_5x --with-fontdir=%_datadir/fonts/misc
+./configure --prefix=/usr --with-fontdir=%_datadir/fonts/misc
 
 %make
 
