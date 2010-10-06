@@ -1,5 +1,5 @@
 Name: x11-font-misc-misc
-Version: 1.1.0
+Version: 1.1.1
 Release: %mkrel 1
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
