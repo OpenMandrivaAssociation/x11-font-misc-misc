@@ -1,6 +1,6 @@
 Name: x11-font-misc-misc
 Version: 1.1.2
-Release: %mkrel 4
+Release: %mkrel 5
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -64,4 +64,82 @@ rm -rf %{buildroot}
 %_datadir/fonts/misc/k14.pcf.gz
 %_datadir/fonts/misc/nil2.pcf.gz
 
+
+
+
+%changelog
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.1.2-4mdv2011.0
++ Revision: 675490
+- br fontconfig for fc-query used in new rpm-setup-build
+
+* Tue May 17 2011 Funda Wang <fwang@mandriva.org> 1.1.2-3
++ Revision: 675255
+- rebuild for new rpm-setup
+
+* Sat May 07 2011 Oden Eriksson <oeriksson@mandriva.com> 1.1.2-2
++ Revision: 671213
+- mass rebuild
+
+* Thu Dec 09 2010 Thierry Vignaud <tv@mandriva.org> 1.1.2-1mdv2011.0
++ Revision: 618743
+- new release
+
+* Wed Oct 06 2010 Thierry Vignaud <tv@mandriva.org> 1.1.1-1mdv2011.0
++ Revision: 583220
+- new release
+
+* Wed Oct 06 2010 Thierry Vignaud <tv@mandriva.org> 1.1.0-1mdv2011.0
++ Revision: 583212
+- new release
+
+* Wed Jan 13 2010 Paulo Ricardo Zanoni <pzanoni@mandriva.com> 1.1.0-1mdv2010.1
++ Revision: 490609
+- New version: 1.1.0
+
+* Sat Mar 07 2009 Antoine Ginies <aginies@mandriva.com> 1.0.0-9mdv2009.1
++ Revision: 351282
+- rebuild
+
+* Wed Jun 18 2008 Thierry Vignaud <tv@mandriva.org> 1.0.0-8mdv2009.0
++ Revision: 225999
+- rebuild
+- fix no-buildroot-tag
+
+* Mon Feb 04 2008 Thierry Vignaud <tv@mandriva.org> 1.0.0-7mdv2008.1
++ Revision: 162433
+- fix uninstalling
+- stop using prereq
+- kill re-definition of %%buildroot on Pixel's request
+
+* Thu Jul 05 2007 Ademar de Souza Reis Jr <ademar@mandriva.com.br> 1.0.0-6mdv2008.0
++ Revision: 48673
+- remove unecessary configure flags
+- remove /usr/share/fonts/misc/ from %%files, will put it in
+  x11-font-alias where other directories belong.
+
+* Tue Jul 03 2007 Ademar de Souza Reis Jr <ademar@mandriva.com.br> 1.0.0-5mdv2008.0
++ Revision: 47633
+- own %%_datadir/fonts/misc
+- fix license field
+
+
+* Thu Aug 03 2006 Helio Chissini de Castro <helio@mandriva.com>
++ 2006-08-03 18:55:09 (51491)
+- Fonts packages now are noarch. Moved for new place /usr/share/fonts. Approved by Boiko
+
+* Wed May 31 2006 Gustavo Pichorim Boiko <boiko@mandriva.com>
++ 2006-05-31 18:32:34 (31796)
+- rebuild to fix cooker uploading
+
+* Mon May 29 2006 Andreas Hasenack <andreas@mandriva.com>
++ 2006-05-29 14:36:37 (31646)
+- renamed mdv to packages because mdv is too generic and it's hosting only packages anyway
+
+* Thu May 04 2006 Gustavo Pichorim Boiko <boiko@mandriva.com>
++ 2006-05-04 21:25:17 (26918)
+- increment release
+
+* Thu Apr 27 2006 Gustavo Pichorim Boiko <boiko@mandriva.com>
++ 2006-04-27 04:02:05 (26704)
+- Adding X.org 7.0 to the repository
 
