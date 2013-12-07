@@ -1,6 +1,6 @@
 Name: x11-font-misc-misc
 Version: 1.1.2
-Release: 6
+Release: 7
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
