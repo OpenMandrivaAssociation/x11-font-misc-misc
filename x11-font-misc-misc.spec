@@ -22,7 +22,7 @@ Xorg X11 font misc-misc
 %setup -q -n font-misc-misc-%{version}
 
 %build
-./configure --prefix=/usr --with-fontdir=%_datadir/fonts/misc
+%configure --with-fontdir=%_datadir/fonts/misc
 
 %make
 
