@@ -1,6 +1,6 @@
 Name: x11-font-misc-misc
 Version: 1.1.2
-Release: 16
+Release: 17
 Summary: Xorg X11 font misc-misc
 Group: Development/X11
 URL: http://xorg.freedesktop.org
@@ -19,15 +19,15 @@ Requires(post,postun): mkfontdir mkfontscale
 Xorg X11 font misc-misc
 
 %prep
-%setup -q -n font-misc-misc-%{version}
+%aurosetup -n font-misc-misc-%{version} -p1
 
 %build
 %configure --with-fontdir=%_datadir/fonts/misc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 rm -f %{buildroot}%_datadir/fonts/misc/fonts.dir
 rm -f %{buildroot}%_datadir/fonts/misc/fonts.scale
 
