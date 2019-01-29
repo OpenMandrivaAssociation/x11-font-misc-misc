@@ -13,23 +13,24 @@ BuildRequires: x11-font-util >= 1.0.0
 BuildRequires: x11-util-macros >= 1.0.2
 
 Conflicts: xorg-x11 <= 6.9.0
+Requires(post): /bin/sh
 Requires(post,postun): mkfontdir mkfontscale
 
 %description
 Xorg X11 font misc-misc.
 
 %prep
-%aurosetup -n font-misc-misc-%{version} -p1
+%autosetup -n font-misc-misc-%{version} -p1
 
 %build
-%configure --with-fontdir=%_datadir/fonts/misc
+%configure --with-fontdir=%{_datadir}/fonts/misc
 
 %make_build
 
 %install
 %make_install
-rm -f %{buildroot}%_datadir/fonts/misc/fonts.dir
-rm -f %{buildroot}%_datadir/fonts/misc/fonts.scale
+rm -f %{buildroot}%{_datadir}/fonts/misc/fonts.dir
+rm -f %{buildroot}%{_datadir}/fonts/misc/fonts.scale
 
 %post
 mkfontscale %{_datadir}/fonts/misc
